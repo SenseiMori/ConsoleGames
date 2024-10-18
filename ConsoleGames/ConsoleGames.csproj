@@ -11,4 +11,13 @@
     <Compile Remove="Code\Snake.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="bin\Debug\net8.0\" />
+    <Folder Include="bin\Release\net8.0\" />
+  </ItemGroup>
+
 </Project>
