@@ -50,6 +50,7 @@ namespace ConsoleGames.Code
     {
         private readonly int windowSizeX = int.Parse(ConfigurationManager.AppSettings["WindowSizeX"]!);
         private readonly int windowSizeY = int.Parse(ConfigurationManager.AppSettings["WindowSizeY"]!);
+        private readonly int WindowPadding = int.Parse(ConfigurationManager.AppSettings["WindowPadding"]!);
         private Point _element = new Point();
         private Random _rand = new();
         public List<Point>? allWalls;
@@ -59,7 +60,7 @@ namespace ConsoleGames.Code
         {
 
            allWalls = new List<Point>();
-           Console.SetWindowSize(windowSizeX + 2, windowSizeY + 2);
+           Console.SetWindowSize(windowSizeX + WindowPadding, windowSizeY + WindowPadding);
            DrawHorizontal(windowSizeX, 0);
            DrawHorizontal(windowSizeX, windowSizeY);
            DrawVertical(0, windowSizeY);
